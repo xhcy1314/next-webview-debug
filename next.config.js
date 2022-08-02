@@ -1,12 +1,13 @@
-/** @type {import('next').NextConfig} */
+const os = require('os');
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: 'http://xuxiaohua.xhcy.online:8088',
+  assetPrefix: `http://${os.userInfo().username}.xhcy.online:8088`,
+  // assetPrefix: './',
   experimental: {
     images: {
-        unoptimized: true
-    }
-}
-}
+      unoptimized: true,
+    },
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
